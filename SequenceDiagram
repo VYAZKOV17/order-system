@@ -38,8 +38,8 @@ alt Товар недоступен
     OrderService -> NotificationService : POST /notifications
     NotificationService --> OrderService : 202 Accepted
 
-    OrderService --> Gate : 409 Conflict
-    Gate --> Front : 409 Conflict
+    OrderService --> Gate : 400 Bad Request
+    Gate --> Front : 400 Bad Request
     Front --> Client : Товар недоступен
 
 else Товар доступен

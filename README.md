@@ -58,7 +58,29 @@
 
 
 ### API
+Получение заказа:
+
+GET /api/v1/orders/{orderId}
+
+Оплата:
+
+POST /api/v1/orders/{orderId}/payment
+
+Отмена:
+
+POST /api/v1/orders/{orderId}/cancel
+
+Статус:
+
+GET /api/v1/orders/{orderId}/status
 
 OpenAPI specification:
 
 [openapi.yaml](openapi.yaml)
+
+### Коды
+201 Created
+400 Bad Request
+404 Not Found
+422 Unprocessable Content
+500 Internal Server Error

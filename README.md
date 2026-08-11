@@ -23,9 +23,6 @@
 - передача на сборку;
 - уведомление клиента.
 
-## Функциональные требования
-
-
 ## Диаграммы
 
 ### BPMN
@@ -53,7 +50,7 @@
 <img width="717" height="697" alt="image" src="https://github.com/user-attachments/assets/5498698a-34fb-445c-8453-9f9909ac5532" />
 
 
-## API
+### API
 
 OpenAPI specification:
 

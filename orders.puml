@@ -1,0 +1,49 @@
+@startuml интернет-магазин обработки заказов
+title Интернет-магазин обработки заказов
+
+left to right direction
+skinparam packageStyle rectangle
+
+' Внешние акторы
+actor "Клиент" as Client
+actor "Сотрудник склада" as Employee
+
+actor "Order Service" as OrderService
+actor "Payment Service" as PaymentService
+actor "Inventory Service" as InventoryService
+
+' Граница системы
+rectangle "Интернет-магазин" {
+  usecase "Просмотреть каталог" as BrowseProducts
+  usecase "Добавить товар в корзину" as AddToCart
+  usecase "Оформить заказ" as CreateOrder
+  usecase "Оплатить заказ" as PayOrder
+  usecase "Обработать заказ" as ProcessOrder
+  usecase "Просмотреть статус заказа" as ViewOrderStatus
+  usecase "Просмотреть заказы на сборку" as ViewOrdersForProcessing
+  usecase "Подтвердить сборку" as ConfirmOrderProcessing
+  usecase "Зафиксировать передачу заказа" as RecordOrderTransfer
+  usecase "Отменить заказ" as CancelOrder
+}
+
+' Связи клиента с системой
+Client --> BrowseProducts
+Client --> AddToCart
+Client --> CreateOrder
+Client --> PayOrder
+Client --> ViewOrderStatus
+Client --> CancelOrder
+
+
+' Связь сотрудника склада с системой
+Employee --> ProcessOrder
+Employee --> ViewOrdersForProcessing
+Employee --> ConfirmOrderProcessing
+Employee --> RecordOrderTransfer
+
+' Связи с внешними сервисами
+CreateOrder --> OrderService : создать заказ
+PayOrder --> PaymentService : провести оплату
+ProcessOrder --> InventoryService : проверить наличие\nи зарезервировать товар
+
+@enduml

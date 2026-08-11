@@ -35,25 +35,22 @@
 
 ### Use Case
 
-[Открыть Use Case](...)
+[Открыть Use Case](UseCase.puml)
 
 ### Sequence
 
-[Открыть Sequence Diagram](...)
+[Открыть Sequence Diagram](sequence_diagram)
 
 ### Class Diagram
 
-[Открыть Class Diagram](...)
+[Открыть Class Diagram](class_diagram)
 
 ## API
 
 OpenAPI specification:
 
-[openapi.yaml](...)
+[openapi.yaml](openapi.yaml)
 
-## Business Rules
-
-[Business Rules](...)
 
 ## Database
 

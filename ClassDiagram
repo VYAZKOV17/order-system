@@ -1,0 +1,82 @@
+@startuml
+
+class Customer {
+    id: UUID
+    firstName: String
+    lastName: String
+    createdAt: DateTime
+    email: String
+}
+
+class Order {
+    id: UUID
+    status: OrderStatus
+    createdAt: DateTime
+    totalAmount: Money
+}
+
+class OrderItem {
+    id: UUID
+    orderId: UUID
+    productId: UUID
+    createdAt: DateTime
+    quantity: Integer
+    unitPrice: Money
+}
+
+class Product {
+    id: UUID
+    name: String
+    price: Money
+    status: ProductStatus
+    createdAt: DateTime
+}
+
+class Payment {
+    id: UUID
+    orderId: UUID
+    amount: Money
+    status: PaymentStatus
+    providerPaymentId: String
+    createdAt: DateTime
+    completedAt: DateTime
+}
+
+enum OrderStatus {
+    CREATED
+    PENDING_PAYMENT
+    PAID
+    ASSEMBLY
+    READY
+    COMPLETED
+    CANCELLED
+    PAYMENT_FAILED
+}
+
+enum PaymentStatus {
+    PENDING
+    SUCCESS
+    FAILED
+    REFUNDED
+}
+
+enum ProductStatus {
+    ACTIVE
+    INACTIVE
+    OUT_OF_STOCK
+}
+
+
+' Клиент создаёт заказы
+Customer "1" -- "0..*" Order : creates
+
+' Заказ содержит товарные позиции
+Order "1" *-- "1..*" OrderItem : contains
+
+' Каждая товарная позиция относится к одному товару
+Product "1" -- "0..*" OrderItem : referenced by
+
+' У заказа может быть несколько попыток оплаты
+Order "1" -- "0..*" Payment : has
+
+@enduml

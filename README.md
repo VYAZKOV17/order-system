@@ -47,7 +47,7 @@
 
 [Открыть Sequence Diagram](SequenceDiagram)
 
-<img width="1164" height="1960" alt="image" src="https://github.com/user-attachments/assets/94807d23-3895-426c-999a-75ee3e87adc2" />
+<img width="1164" height="1960" alt="image" src="https://github.com/user-attachments/assets/b7690c3a-f14b-4531-9548-c8de9b7ef313" />
 
 
 ### Class Diagram

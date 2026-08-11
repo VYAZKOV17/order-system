@@ -32,7 +32,7 @@
 
 ### Use Case
 
-[Открыть Use Case](UseCase.puml
+[Открыть Use Case](UseCase.puml)
 
 <img width="958" height="1050" alt="image" src="https://github.com/user-attachments/assets/eb254bce-cead-4149-9399-94ac195fc302" />
 

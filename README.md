@@ -39,11 +39,11 @@
 
 ### Sequence
 
-[Открыть Sequence Diagram](sequence_diagram)
+[Открыть Sequence Diagram](SequenceDiagram)
 
 ### Class Diagram
 
-[Открыть Class Diagram](class_diagram)
+[Открыть Class Diagram](ClassDiagram)
 
 ## API
 

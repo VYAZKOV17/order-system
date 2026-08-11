@@ -30,7 +30,8 @@
 
 ### BPMN
 
-[Открыть BPMN](...)
+<img width="1841" height="1295" alt="image" src="https://github.com/user-attachments/assets/c41eac43-f63c-4442-a1c3-99d4bcb06ddb" />
+
 
 ### Use Case
 
